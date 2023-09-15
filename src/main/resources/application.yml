@@ -1,1 +1,23 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:15432/ead-courses
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      jdbc:
+        lob-non-contextual-creation: true
+    properties:
+      hibernate:
+        show-sql: true
+
+## swagger-ui custom path
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
 
